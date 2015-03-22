@@ -50,7 +50,7 @@ get_tidy <- function (dataset=data.frame()) {
     return(res)
 }
 
-run_analysis <- function (datadir="UCI HAR Dataset", file="tidy.txt") {
+run_analysis <- function (datadir="UCI HAR Dataset") {
     dataset <- get_dataset(datadir)
     tidy <- get_tidy(dataset)
     return(tidy)
