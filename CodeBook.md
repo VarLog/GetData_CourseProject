@@ -6,7 +6,7 @@ There is a R script called `run_analysis.R` in this repository. It contans three
 
 * `get_dataset <- function (datadir="UCI HAR Dataset")`
 
-	This function reads the Samsung data and return the merged tidy dataset with all of the needed measurements.
+	This function reads the Samsung data and returns the merged tidy dataset with all of the needed measurements.
 	1. Read the `activity_labels.txt` table.
 	2. Read the `features.txt` table.
 	3. Extract only the features that related the mean and standard deviation.
@@ -18,10 +18,10 @@ There is a R script called `run_analysis.R` in this repository. It contans three
 	1. Split the dataset by subject.
 	2. For each subject split the dataset by activity.
 	3. For each subject and activity calculate average of each feature variable.
-	4. Store the results in a new dataset and return it.
+	4. Save the results in a new dataset and return it.
 * `run_analysis <- function (datadir="UCI HAR Dataset")`
 	
-	This is agregate function with does following steps:
+	This is agregate function that does the following steps:
 	1. Run `get_dataset` and store the result dataset.
 	2. Run `get_tidy` and pass the stored dataset in it as an argument.
 	3. Return the result of `get_tidy`.
@@ -35,11 +35,11 @@ You can use `run_analysis` function for getting the result tidy dataset like thi
 > tidy <- run_analysis()
 ``` 
 
-Be sure that the Samsung data is in your working directory or use the `datadir=` argument.
+Check that the Samsung data is in your working directory or use the `datadir=` argument.
 
 ## Structure of the result dataset
 
-A copy of the result tidy dataset saved in the `tidy.txt` file. It contains a table with 180 observation of 50 variables.
+A copy of the result tidy dataset saved in the `tidy.txt` file. It contains a table with 180 observations of 50 variables.
 
 ```
  $ subj.id             : int  [1..30]
